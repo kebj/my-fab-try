@@ -1,0 +1,67 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        // {
+        //     "name": "Debug Client",
+        //     "type":"chrome",
+        //     "request": "launch",
+        //     "preLaunchTask": "Build: Client",
+        //     "url": "http://localhost:8080",
+        //     "webRoot": "${workspaceFolder}/src/Client",
+        //     "sourceMaps": true,
+        // },
+
+
+        // {
+        //     "name": "Debug Server",
+        //     "type": "coreclr",
+        //     "preLaunchTask": "Build: Server",
+        //     "request": "launch",
+        //     "program": "${workspaceFolder}/src/Server/bin/Debug/net8.0/Server.dll",
+        //     "cwd": "${workspaceFolder}",
+        //     "stopAtEntry": false,
+
+        //     // "serverReadyAction": {
+        //     //     "action": "openExternally",
+        //     //     "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+        //     // },
+        //     // "env": {
+        //     //     "ASPNETCORE_ENVIRONMENT": "Development",
+        //     //     "ASPNETCORE_URLS":"https://localhost:8080"
+        //     // },
+        //     // "sourceFileMap": {
+        //     //     "/Views": "${workspaceFolder}"
+        //     // }
+        // }
+
+
+        {
+            "name": "Debug Client",
+            "type":"chrome",
+            "request": "launch",
+            "preLaunchTask": "Watch Client",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}/src/Client",
+            "sourceMaps": true,
+
+        },
+        {
+            "name": "Debug Server",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/Server/bin/Debug/net8.0/Server.dll",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build: Server.fsproj",
+            
+
+        }
+    ],
+
+    "compounds": [
+    {
+      "name": "Debug Client and Server",
+      "configurations": [ "Debug Server","Debug Client",]
+    }
+  ]
+
+}
