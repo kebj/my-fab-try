@@ -70,10 +70,10 @@ module Proc =
 
 let createProcess exe args dir =
     // Use `fromRawCommand` rather than `fromRawCommandLine`, as its behaviour is less likely to be misunderstood.
-    
+
     CreateProcess.fromRawCommand exe args
     |> CreateProcess.withWorkingDirectory dir
-    |> CreateProcess.ensureExitCode
+    //|> CreateProcess.ensureExitCode
 
 let dotnet args dir = createProcess "dotnet" args dir
 
@@ -105,5 +105,5 @@ let runOrDefault args =
 
         0
     with e ->
-        printfn "%A" e
+        //printfn "%A" e
         1

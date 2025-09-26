@@ -6,7 +6,7 @@ open SharedTypes
 
 open Fable.Core
 open Thoth.Fetch
-open Feliz.DaisyUI
+
 
 
 type Router =
@@ -24,15 +24,12 @@ type Router =
                 Html.div [
                     prop.className "container mx-auto px-4 py-4"
                     prop.children [
-                        Navbar.Render()
+
                         Html.div [
                             prop.className "p-6"
                             prop.children [
                                 match currentUrl with
-                                | [] -> Html.h1 "Index"
-                                | [ "hello" ] -> Hello.Render()
-                                | [ "counter" ] -> Counter.Render()
-                                | [ "users" ] -> Users.Render()
+                                | [] -> Hello.Render()
                                 | otherwise -> Html.h1 "Not found"
                                ]
                             ]

@@ -8,7 +8,8 @@ open SharedTypes
 
 open Fable.Core
 open Thoth.Fetch
-open Feliz.DaisyUI
+open Feliz.Shadcn
+
 
 
 type Hello =
@@ -16,5 +17,6 @@ type Hello =
     static member Render() =
         React.fragment [
             Html.h1 "Hello"
-
+            Shadcn.button [
+                prop.text "Button" ]
         ]
