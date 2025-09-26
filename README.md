@@ -24,7 +24,10 @@ Use `Bundle` target to package your app:
 dotnet run -- Bundle
 
 ```
+See:
+https://safe-stack.github.io/docs/recipes/ui/add-shadcn/
 
+npx shadcn@latest add button
 
 
 
