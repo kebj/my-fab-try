@@ -7,7 +7,7 @@ open SharedTypes
 
 open Fable.Core
 open Thoth.Fetch
-open Feliz.DaisyUI
+
 
 type Counter =
     [<ReactComponent>]

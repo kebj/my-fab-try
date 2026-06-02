@@ -1,20 +1,22 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import tailwindcss from '@tailwindcss/vite';
-
+import { defineConfig } from 'vite'
+import path from "path"
+import tailwindcss from '@tailwindcss/vite'
+import react from '@vitejs/plugin-react'
 const proxyPort = process.env.SERVER_PROXY_PORT || "5000";
 const proxyTarget = "http://localhost:" + proxyPort;
 
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
-    plugins: [
-        react(),
-        tailwindcss()
-    ],
+  plugins: [react(), tailwindcss(),],
     build: {
         outDir: "../../deploy/public",
         emptyOutDir: true
     },
+     resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./*"),
+    },
+  },
     server: {
         port: 8080,
         proxy: {
@@ -28,4 +30,4 @@ export default defineConfig({
             ignored: [ "**/*.fs" ]
         },
     }
-});
+})

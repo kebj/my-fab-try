@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Update="FSharp.Core" Version="8.0.301" />
@@ -11,7 +11,12 @@
     <Compile Include="components\Counter.fs" />
     <Compile Include="components\Hello.fs" />
     <Compile Include="components\Users.fs" />
+    <Compile Include="components\Drawer.fs" />    
+    <Compile Include="pages\HomePage.fs" />
+    <Compile Include="pages\AboutPage.fs" />
+    <Compile Include="pages\UsersPage.fs" />
     <Compile Include="components\Navbar.fs" />
+
     <Compile Include="components\Router.fs" />
     <Compile Include="Index.fs" />
   </ItemGroup>
@@ -20,11 +25,12 @@
     <PackageReference Include="Fable.Core" Version="4.5.0" />
     <PackageReference Include="Fable.Promise" Version="3.2.0" />
     <PackageReference Include="Feliz" Version="2.9.0" />
-    <PackageReference Include="Feliz.DaisyUI" Version="5.2.0" />
     <PackageReference Include="Feliz.Router" Version="4.0.0" />
+    <PackageReference Include="Feliz.Shadcn" Version="0.9.4" />
     <PackageReference Include="Thoth.Fetch" Version="3.0.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Shared\Shared.fsproj" />
+
   </ItemGroup>
 </Project>

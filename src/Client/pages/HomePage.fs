@@ -11,10 +11,10 @@ open Thoth.Fetch
 
 
 
-type Hello =
+type HomePage =
     [<ReactComponent>]
     static member Render() =
         React.fragment [
-            Html.h1 "Hello"
+            Html.h1 "Home"
 
         ]

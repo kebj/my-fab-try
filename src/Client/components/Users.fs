@@ -5,7 +5,7 @@ open SharedTypes
 
 open Fable.Core
 open Thoth.Fetch
-open Feliz.DaisyUI
+
 
 type Users =
     [<ReactComponent>]
@@ -28,11 +28,7 @@ type Users =
             ]
 
         Html.div [
-            Daisy.button.button [
-                button.primary
-                prop.text "DaisyUI"
-                prop.onClick (fun a -> printfn "DaisyUI cli")
-            ]
+            
 
             if getUsers.Length > 0 then
                 renderUsers getUsers

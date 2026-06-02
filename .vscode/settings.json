@@ -1,3 +1,19 @@
 {
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/bin": true,
+        "**/.vite": true,
+        "**/obj": true,
+        "**/deploy": true,
+        "**/node_modules": true,
+        "**/output": true,
+        "**/.npmrc": true,
+        ".npmrc": true
+    },
+    "explorerExclude.backup": {}
     
 }
