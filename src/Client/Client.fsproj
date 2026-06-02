@@ -3,9 +3,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net10.0</TargetFramework>
   </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Update="FSharp.Core" Version="8.0.301" />
-  </ItemGroup>
+
   <ItemGroup>
     <Compile Include="apis\UserApi.fs" />
     <Compile Include="components\Hello.fs" />
@@ -15,7 +13,6 @@
     <Compile Include="pages\AboutPage.fs" />
     <Compile Include="pages\UsersPage.fs" />
     <Compile Include="components\Navbar.fs" />
-
     <Compile Include="components\Router.fs" />
     <Compile Include="Index.fs" />
   </ItemGroup>

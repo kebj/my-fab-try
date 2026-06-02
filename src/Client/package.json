@@ -20,11 +20,6 @@
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "tailwind-merge": "^3.3.1",
-<<<<<<< HEAD
         "tailwindcss": "^4.1.13"
-=======
-        "tailwindcss": "^4.1.13",
-        "vaul": "^1.1.2"
->>>>>>> da879125127d5d4cd4ce938234c85b0a5709bea0
     }
 }

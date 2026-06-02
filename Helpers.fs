@@ -105,5 +105,5 @@ let runOrDefault args =
 
         0
     with e ->
-        //printfn "%A" e
+        printfn "%A" e
         1

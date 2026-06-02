@@ -17,7 +17,7 @@ type Hello =
         React.fragment [
             Html.h1 "Hello"
             
-            Shadcn.button [
+            Shadcn.Shadcn.button [
                 prop.onClick (fun _ -> Browser.Dom.window.alert "Hello, shadcn/ui!")
                 prop.text "Button" ]
         ]

@@ -50,14 +50,10 @@ type Router =
                             prop.className "p-6"
                             prop.children [
                                 match currentUrl with
-<<<<<<< HEAD
                                 | [] -> Html.h1 "Index"
                                 | [ "home" ] -> HomePage.Render()
                                 | [ "about" ] -> AboutPage.Render()
                                 | [ "users" ] -> UsersPage.Render()
-=======
-                                | [] -> Hello.Render()
->>>>>>> da879125127d5d4cd4ce938234c85b0a5709bea0
                                 | otherwise -> Html.h1 "Not found"
                             ]
                         ]
