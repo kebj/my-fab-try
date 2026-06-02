@@ -24,7 +24,7 @@ type Router =
                 Html.div [
                     prop.className "container mx-auto px-4 py-4"
                     prop.children [
-                        Navbar.Render()
+
                         Html.div [
                             prop.className "drawer-side"
                             prop.children [
@@ -50,10 +50,14 @@ type Router =
                             prop.className "p-6"
                             prop.children [
                                 match currentUrl with
+<<<<<<< HEAD
                                 | [] -> Html.h1 "Index"
                                 | [ "home" ] -> HomePage.Render()
                                 | [ "about" ] -> AboutPage.Render()
                                 | [ "users" ] -> UsersPage.Render()
+=======
+                                | [] -> Hello.Render()
+>>>>>>> da879125127d5d4cd4ce938234c85b0a5709bea0
                                 | otherwise -> Html.h1 "Not found"
                             ]
                         ]

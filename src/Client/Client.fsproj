@@ -8,7 +8,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="apis\UserApi.fs" />
-    <Compile Include="components\Counter.fs" />
     <Compile Include="components\Hello.fs" />
     <Compile Include="components\Users.fs" />
     <Compile Include="components\Drawer.fs" />    
