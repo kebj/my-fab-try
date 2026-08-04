@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <RootNamespace>MyFabTry</RootNamespace>
   </PropertyGroup>
-  
+
   <ItemGroup>
     <Compile Include="Helpers.fs" />
     <Compile Include="Build.fs" />
@@ -15,6 +15,7 @@
     <PackageReference Include="FAKE.Core" Version="5.16.0" />
     <PackageReference Include="Fake.Core.Target" Version="6.1.3" />
     <PackageReference Include="Fake.IO.FileSystem" Version="6.1.3" />
+    
 
   </ItemGroup>
 

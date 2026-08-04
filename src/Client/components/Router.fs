@@ -8,6 +8,10 @@ open Fable.Core.JsInterop
 open Feliz
 open System
 
+
+// This is a copy of the Feliz.Router code with some modifications to support query string parameters in the URL segments.
+// se-klabjuh-01
+
 type IUrlSearchParameters =
     abstract entries : unit -> seq<string array>
 
@@ -162,28 +166,28 @@ module ReactExtension =
                 let urlChanged = Option.defaultValue ignore input.onUrlChanged
                 let routeMode = Option.defaultValue RouteMode.Hash input.hashMode
                 Router.onUrlChange routeMode urlChanged ev)
-            
+
             // subscribe to navigation events
-            React.useEffectOnce(fun () -> 
+            React.useEffectOnce(fun () ->
                 if Router.navigatorUserAgent.Contains "Trident" || Router.navigatorUserAgent.Contains "MSIE" then
                     window.addEventListener("hashchange", onChange)
-                else 
+                else
                     window.addEventListener("popstate", onChange)
-                
+
                 window.addEventListener(Router.customNavigationEvent, onChange)
 
                 { new System.IDisposable with
                     member _.Dispose() =
                         if Router.navigatorUserAgent.Contains "Trident" || Router.navigatorUserAgent.Contains "MSIE" then
                             window.removeEventListener("hashchange", onChange)
-                        else 
+                        else
                             window.removeEventListener("popstate", onChange)
 
                         window.removeEventListener(Router.customNavigationEvent, onChange)
                 })
-            
+
             // trigger navigation event on mount
-            React.useEffectOnce(fun () -> 
+            React.useEffectOnce(fun () ->
                 let ev = document.createEvent("CustomEvent")
                 ev.initEvent (Router.customNavigationEvent, true, true)
                 window.dispatchEvent ev |> ignore
