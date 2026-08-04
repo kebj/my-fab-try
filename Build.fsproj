@@ -2,12 +2,10 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <RootNamespace>MyFabTry</RootNamespace>
   </PropertyGroup>
-  <ItemGroup>
-   <PackageReference Update="FSharp.Core" Version="8.0.301" />
-  </ItemGroup>
+  
   <ItemGroup>
     <Compile Include="Helpers.fs" />
     <Compile Include="Build.fs" />

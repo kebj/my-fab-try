@@ -8,17 +8,15 @@ open SharedTypes
 
 open Fable.Core
 open Thoth.Fetch
-open Feliz.Shadcn
-
 
 
 type Hello =
     [<ReactComponent>]
     static member Render() =
-        React.fragment [
+        React.Fragment [
             Html.h1 "Hello"
-            
-            Shadcn.button [
-                prop.onClick (fun _ -> Browser.Dom.window.alert "Hello, shadcn/ui!")
-                prop.text "Button" ]
+
+            Html.button [
+                prop.onClick (fun _ -> Browser.Dom.window.alert "Hello!")
+                prop.text "Say Hello" ]
         ]

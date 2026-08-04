@@ -29,11 +29,13 @@ https://safe-stack.github.io/docs/recipes/ui/add-shadcn/
 
 npx shadcn@latest add button
 
+(dotnet new tool-manifest --force)
+
+dotnet tool install --global Fable --version 5.13.0
 
 
 
 
 
-
-
+The type 'React' does not define a field, constructor, or member named 'fragment'. Maybe you want one of the following:   Fragment
 
