@@ -1,0 +1,64 @@
+Html.div [
+    prop.className "navbar bg-base-100 shadow-sm"
+] [
+    Html.div [
+        prop.className "flex-1"
+    ] [
+        Html.a [
+            prop.className "btn btn-ghost text-xl"
+            // prop.href "#" // Lägg till om du vill ha en klickbar länk
+        ] [
+            Html.text "daisyUI"
+        ]
+    ]
+    Html.div [
+        prop.className "flex gap-2"
+    ] [
+        Html.input [
+            prop.type' "text"
+            prop.placeholder "Search"
+            prop.className "input w-24 md:w-auto"
+        ]
+        Html.div [
+            prop.className "dropdown dropdown-end"
+        ] [
+            Html.div [
+                prop.tabIndex 0
+                prop.role "button"
+                prop.className "btn btn-ghost btn-circle avatar"
+            ] [
+                Html.div [
+                    prop.className "w-10 rounded-full"
+                ] [
+                    Html.img [
+                        prop.alt "Tailwind CSS Navbar component"
+                        prop.src "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                    ]
+                ]
+            ]
+            Html.ul [
+                prop.tabIndex -1
+                prop.className "menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            ] [
+                Html.li [
+                    Html.a [
+                        prop.className "justify-between"
+                    ] [
+                        Html.text "Profile"
+                        Html.span [
+                            prop.className "badge"
+                        ] [
+                            Html.text "New"
+                        ]
+                    ]
+                ]
+                Html.li [
+                    Html.a [ Html.text "Settings" ]
+                ]
+                Html.li [
+                    Html.a [ Html.text "Logout" ]
+                ]
+            ]
+        ]
+    ]
+]

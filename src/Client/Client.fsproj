@@ -5,9 +5,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="apis\UserApi.fs" />
-    <Compile Include="components\Router.fs" />
+    <Compile Include="Feliz.Router\Router.fs" />
     <Compile Include="components\Hello.fs" />
-    <Compile Include="components\AppRouter.fs" />
+    <Compile Include="components\Navigator.fs" />
     <Compile Include="Index.fs" />
   </ItemGroup>
   <ItemGroup>
@@ -18,7 +18,6 @@
     <PackageReference Include="Feliz" Version="3.3.3" />
     <PackageReference Include="Thoth.Fetch" Version="3.0.1" />
     <PackageReference Include="Feliz.DaisyUI" Version="5.3.0" />
-    
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Shared\Shared.fsproj" />

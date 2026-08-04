@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from '@tailwindcss/vite';
+
 import path from 'path';
 const proxyPort = process.env.SERVER_PROXY_PORT || "5000";
 const proxyTarget = "http://localhost:" + proxyPort;
@@ -9,7 +10,7 @@ const proxyTarget = "http://localhost:" + proxyPort;
 export default defineConfig({
     plugins: [
         react(),
-        tailwindcss()
+        tailwindcss(),
     ],
     build: {
         outDir: "../../deploy/public",
