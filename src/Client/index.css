@@ -17,10 +17,10 @@
   h3 {
     font-size: var(--text-lg);
   }
-  a {
+  /* a {
     color: var(--color-blue-600);
     text-decoration-line: underline;
-  }
+  } */
 }
 
 
