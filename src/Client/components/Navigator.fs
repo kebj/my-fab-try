@@ -1,5 +1,6 @@
 namespace App
-
+open Fable.Core.JsInterop
+open Fable.React
 open Feliz
 open Feliz.Router
 open SharedTypes
@@ -17,6 +18,10 @@ type Page =
 type Navigator =
     [<ReactComponent>]
     static member Render() =
+        // Importera komponenten från den relativa sökvägen till TSX-filen
+        let tsButton (props: {| text: string; onClick: unit -> unit |}) : ReactElement =
+            import "TsButton" "../t-components/TsButton.tsx" props []
+
 
         let parseUrl (segments: string list) =
             match segments with
@@ -65,6 +70,8 @@ type Navigator =
                         Html.div [
                             prop.className "flex-1"
                             prop.children [
+                                tsButton {| text = "Klicka här (TS)"; onClick = (fun () -> printfn "Klickat!") |}
+
                                 Daisy.button.button [
                                     button.square
                                     button.ghost
