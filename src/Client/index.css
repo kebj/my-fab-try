@@ -1,5 +1,7 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: light;
+}
 
 .layout {
   max-width: 68.75rem; /* 1100px */

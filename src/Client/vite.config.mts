@@ -20,8 +20,10 @@ export default defineConfig({
         emptyOutDir: true
     },
     resolve: {
+        extensions: ['.tsx', '.ts', '.jsx', '.js', '.fsproj'],
         alias: {
             "@": path.resolve(__dirname),
+
         },
     },
     server: {

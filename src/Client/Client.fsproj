@@ -6,10 +6,12 @@
   <ItemGroup>
     <Compile Include="apis\UserApi.fs" />
     <Compile Include="Feliz.Router\Router.fs" />
-    <Compile Include="components\Hello.fs" />
-    <Compile Include="components\Navigator.fs" />
+    <None Include="MyComponent.tsx" />
+    <Compile Include="pages\Home.fs" />
+    <Compile Include="Navigator.fs" />
     <Compile Include="Index.fs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <PackageReference Include="Elmish" Version="5.0.2" />
     <PackageReference Include="Fable.Browser.Dom" Version="2.20.0" />
@@ -21,5 +23,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Shared\Shared.fsproj" />
+    <Folder Include="components\" />
   </ItemGroup>
 </Project>

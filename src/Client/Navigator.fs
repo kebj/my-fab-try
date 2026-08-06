@@ -1,13 +1,8 @@
 namespace App
-open Fable.Core.JsInterop
-open Fable.React
 open Feliz
 open Feliz.Router
-open SharedTypes
-
-open Fable.Core
-open Thoth.Fetch
 open Feliz.DaisyUI
+
 
 type Page =
     | Home
@@ -16,12 +11,9 @@ type Page =
     | NotFound
 
 type Navigator =
+
     [<ReactComponent>]
     static member Render() =
-        // Importera komponenten från den relativa sökvägen till TSX-filen
-        let tsButton (props: {| text: string; onClick: unit -> unit |}) : ReactElement =
-            import "TsButton" "../t-components/TsButton.tsx" props []
-
 
         let parseUrl (segments: string list) =
             match segments with
@@ -36,7 +28,7 @@ type Navigator =
 
         let renderPage =
             match activePage with
-            | Home -> Html.h1 "Home"
+            | Home -> Home.Render()
             | Users -> Html.h1 "Users"
             | UserProfile id -> Html.h1 (sprintf "Profile for user %d" id)
             | NotFound -> Html.h1 "Page not found"
@@ -47,6 +39,7 @@ type Navigator =
             Router.navigatePath (path)
 
         React.router [
+
             router.pathMode
             router.onUrlChanged updateUrl
             // This component is the equivalent of a React Router Outlet
@@ -54,6 +47,7 @@ type Navigator =
             router.children [
                 // Clean paths with no '#'
                 Daisy.navbar [
+
                     prop.className "mb-2 shadow-lg bg-neutral text-neutral-content rounded-box"
                     prop.children [
                         Html.div [
@@ -68,9 +62,9 @@ type Navigator =
                             ]
                         ]
                         Html.div [
+
                             prop.className "flex-1"
                             prop.children [
-                                tsButton {| text = "Klicka här (TS)"; onClick = (fun () -> printfn "Klickat!") |}
 
                                 Daisy.button.button [
                                     button.square
@@ -102,11 +96,19 @@ type Navigator =
                         Html.div [
                             prop.className "flex-none"
                             prop.children [
+                                Daisy.toggle [
+                                    theme.controller
+                                    prop.value "light"
+                                ]
+
+                                (*
                                 Daisy.button.button [
                                     button.square
                                     button.ghost
                                     prop.children [ Html.i [ prop.className "fa fa-bars" ] ]
                                 ]
+                                *)
+
                             ]
                         ]
                     ]

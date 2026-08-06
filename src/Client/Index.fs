@@ -1,5 +1,3 @@
-
-
 module Index
 
 open Feliz
