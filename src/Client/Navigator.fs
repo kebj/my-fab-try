@@ -48,7 +48,8 @@ type Navigator =
                 // Clean paths with no '#'
                 Daisy.navbar [
                     
-                    prop.className "mb-2 shadow-lg bg-neutral text-neutral-content rounded-box"
+                    //prop.className "mb-2 shadow-lg bg-neutral text-neutral-content rounded-box"
+                    prop.className "shadow-sm rounded-box"
                     prop.children [
                         Html.div [
                             prop.className "flex"

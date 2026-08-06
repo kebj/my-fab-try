@@ -14,11 +14,11 @@ type Home =
             import "default" "../components/MyComponent.tsx"
 
         let clickHandler () =
-            window.alert "Reset button clicked, handled in F#"
+            window.alert "Button clicked and handled in Fable.Feliz F#"
 
         React.Fragment [
             
-            myComponent {| title = "Hello from a .tsx component"; onClick = clickHandler |}
+            myComponent {| title = "Hello from a React.tsx component"; onClick = clickHandler |}
 
 
         ]

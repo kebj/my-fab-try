@@ -11,7 +11,7 @@ export default function MyComponent({ title,  onClick }: MyComponentProps) {
         <div className="card w-96 bg-base-100 card-md shadow-sm">
             <div className="card-body">
                 <h2 className="card-title">{title}</h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                <p>A component for displaying a card with a title, content, and actions</p>
                 <div className="justify-end card-actions">
                 <button className="btn btn-primary" onClick={onClick}>Click me</button>
                 </div>
