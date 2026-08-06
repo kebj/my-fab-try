@@ -4,9 +4,9 @@
     <TargetFramework>net10.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="components\MyComponent.tsx" />
     <Compile Include="apis\UserApi.fs" />
     <Compile Include="Feliz.Router\Router.fs" />
-    <None Include="MyComponent.tsx" />
     <Compile Include="pages\Home.fs" />
     <Compile Include="Navigator.fs" />
     <Compile Include="Index.fs" />
@@ -23,6 +23,5 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Shared\Shared.fsproj" />
-    <Folder Include="components\" />
   </ItemGroup>
 </Project>

@@ -47,7 +47,7 @@ type Navigator =
             router.children [
                 // Clean paths with no '#'
                 Daisy.navbar [
-
+                    
                     prop.className "mb-2 shadow-lg bg-neutral text-neutral-content rounded-box"
                     prop.children [
                         Html.div [

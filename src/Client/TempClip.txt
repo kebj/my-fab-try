@@ -62,3 +62,7 @@ Html.div [
         ]
     ]
 ]
+
+
+"daisyui": "^5.7.16",
+"tailwindcss": "^4.3.3"
