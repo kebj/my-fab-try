@@ -1,6 +1,9 @@
 ﻿open Fake.Core
 open Fake.IO
 
+// See SAFE: https://safe-stack.github.io/docs/ https://safe-stack.github.io/docs/template-safe-commands/
+// See FAKE: https://github.com/fsprojects/FAKE
+
 
 open Helpers
 
