@@ -29,4 +29,9 @@
   <ItemGroup>
     <ProjectReference Include="..\Shared\Shared.fsproj" />
   </ItemGroup>
+  <ItemGroup>
+    <!-- Watch all TypeScript files, but ignore the node_modules folder -->
+    <Watch Include="**\*.ts" Exclude="node_modules\**\*" />
+  </ItemGroup>
+    
 </Project>
