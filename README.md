@@ -11,12 +11,19 @@ You'll need to install the following pre-requisites in order to build
 
 ## Starting the application
 
-To concurrently run the server and the client components in watch mode use the following command:
+To concurrently run the server and the client components in watch mode use the following command in the project root:
 
 ```bash
 dotnet run
 ```
 Then open `http://localhost:8080` in your browser.
+
+
+To shut down the server use the following command:
+```bash
+Ctrl + c
+```
+
 
 Use `Bundle` target to package your app:
 
